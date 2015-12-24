@@ -10,6 +10,7 @@
 		CDFBA4851C2B8F3A00D059AF /* Captcha.h in Headers */ = {isa = PBXBuildFile; fileRef = CDFBA4841C2B8F3A00D059AF /* Captcha.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDFBA48C1C2B8F3A00D059AF /* Captcha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFBA4811C2B8F3A00D059AF /* Captcha.framework */; };
 		CDFBA4911C2B8F3A00D059AF /* CaptchaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFBA4901C2B8F3A00D059AF /* CaptchaTests.swift */; };
+		CDFBA49C1C2B8F9C00D059AF /* Captcha.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFBA49B1C2B8F9C00D059AF /* Captcha.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		CDFBA48B1C2B8F3A00D059AF /* CaptchaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaptchaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDFBA4901C2B8F3A00D059AF /* CaptchaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptchaTests.swift; sourceTree = "<group>"; };
 		CDFBA4921C2B8F3A00D059AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDFBA49B1C2B8F9C00D059AF /* Captcha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Captcha.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				CDFBA4841C2B8F3A00D059AF /* Captcha.h */,
 				CDFBA4861C2B8F3A00D059AF /* Info.plist */,
+				CDFBA49B1C2B8F9C00D059AF /* Captcha.swift */,
 			);
 			path = Captcha;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDFBA49C1C2B8F9C00D059AF /* Captcha.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +312,7 @@
 		CDFBA4961C2B8F3A00D059AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +323,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = zhaokai.Captcha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		CDFBA4971C2B8F3A00D059AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
