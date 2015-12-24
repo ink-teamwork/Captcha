@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Captcha: UIView {
+public class Captcha: UIView {
 
     let changeArray = ["0","1","2","3","4","5","6","7","8","9"]
     var changeString = ""
@@ -26,7 +26,7 @@ class Captcha: UIView {
         self.changeCaptcha()
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -39,12 +39,12 @@ class Captcha: UIView {
         
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override public func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.changeCaptcha()
         self.setNeedsDisplay()
     }
 
-    override func drawRect(rect: CGRect){
+    override public func drawRect(rect: CGRect){
         super.drawRect(rect)
         self.backgroundColor = self.getColor()
 
